@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.5)
+# Project's name
+project(rbs_lqr_cpp)
+
+# Set C++17 as default
+set(CMAKE_CXX_STANDARD 17)
+
+# Find dependencies -> Eigen library
+find_package(	eigen3_cmake_module		REQUIRED)
+find_package(	Eigen3					REQUIRED)
+
+# Include the necessary directories
+include_directories(
+SYSTEM
+${EIGEN_INCLUDE_DIR}
+include
+)
+
+# Add executables
