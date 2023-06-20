@@ -1,4 +1,4 @@
-# Install script for directory: /home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_lqr_cpp/matplotplusplus
+# Install script for directory: /home/navil/DesktopWin/Robesafe/rbs_control_modules/cpp_controllers/rbs_lqr_cpp/matplotplusplus
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -37,13 +37,8 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/matplotplusplus/source/cmake_install.cmake")
+  include("/home/navil/DesktopWin/Robesafe/rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/matplotplusplus/source/cmake_install.cmake")
 endif()
 

@@ -1,55 +1,96 @@
 Determining if the function sgemm_ exists failed with the following output:
-Change Dir: /home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp
+Change Dir: /home/navil/DesktopWin/Robesafe/rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1943f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1943f.dir/build.make CMakeFiles/cmTC_1943f.dir/build
-gmake[1]: Entering directory '/home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1943f.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_ -o CMakeFiles/cmTC_1943f.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
-Linking C executable cmTC_1943f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1943f.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_ CMakeFiles/cmTC_1943f.dir/CheckFunctionExists.c.o -o cmTC_1943f 
-/usr/bin/ld: CMakeFiles/cmTC_1943f.dir/CheckFunctionExists.c.o: in function `main':
+Run Build Command(s):/usr/bin/make cmTC_247be/fast && /usr/bin/make -f CMakeFiles/cmTC_247be.dir/build.make CMakeFiles/cmTC_247be.dir/build
+make[1]: Entering directory '/mnt/c/Users/Navil/Desktop/Robesafe/rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_247be.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_247be.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_247be
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_247be.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_    CMakeFiles/cmTC_247be.dir/CheckFunctionExists.c.o  -o cmTC_247be 
+/usr/bin/ld: CMakeFiles/cmTC_247be.dir/CheckFunctionExists.c.o: in function `main':
 CheckFunctionExists.c:(.text+0x14): undefined reference to `sgemm_'
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [CMakeFiles/cmTC_1943f.dir/build.make:99: cmTC_1943f] Error 1
-gmake[1]: Leaving directory '/home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_1943f/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_247be.dir/build.make:87: cmTC_247be] Error 1
+make[1]: Leaving directory '/mnt/c/Users/Navil/Desktop/Robesafe/rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_247be/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/navil/DesktopWin/Robesafe/rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_53e5e/fast && /usr/bin/make -f CMakeFiles/cmTC_53e5e.dir/build.make CMakeFiles/cmTC_53e5e.dir/build
+make[1]: Entering directory '/mnt/c/Users/Navil/Desktop/Robesafe/rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_53e5e.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_53e5e.dir/src.c.o   -c /home/navil/DesktopWin/Robesafe/rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_53e5e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53e5e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_53e5e.dir/src.c.o  -o cmTC_53e5e 
+/usr/bin/ld: CMakeFiles/cmTC_53e5e.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_53e5e.dir/build.make:87: cmTC_53e5e] Error 1
+make[1]: Leaving directory '/mnt/c/Users/Navil/Desktop/Robesafe/rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_53e5e/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/navil/DesktopWin/Robesafe/rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_81f47/fast && /usr/bin/make -f CMakeFiles/cmTC_81f47.dir/build.make CMakeFiles/cmTC_81f47.dir/build
+make[1]: Entering directory '/mnt/c/Users/Navil/Desktop/Robesafe/rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_81f47.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_81f47.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_81f47
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81f47.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_81f47.dir/CheckFunctionExists.c.o  -o cmTC_81f47  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_81f47.dir/build.make:87: cmTC_81f47] Error 1
+make[1]: Leaving directory '/mnt/c/Users/Navil/Desktop/Robesafe/rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_81f47/fast] Error 2
 
 
 
 Determining if the function cheev_ exists failed with the following output:
-Change Dir: /home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp
+Change Dir: /home/navil/DesktopWin/Robesafe/rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_34d2e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_34d2e.dir/build.make CMakeFiles/cmTC_34d2e.dir/build
-gmake[1]: Entering directory '/home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_34d2e.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_34d2e.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
-Linking C executable cmTC_34d2e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34d2e.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_ CMakeFiles/cmTC_34d2e.dir/CheckFunctionExists.c.o -o cmTC_34d2e  /usr/lib/x86_64-linux-gnu/libblas.so -lm -ldl 
-/usr/bin/ld: CMakeFiles/cmTC_34d2e.dir/CheckFunctionExists.c.o: in function `main':
+Run Build Command(s):/usr/bin/make cmTC_260b9/fast && /usr/bin/make -f CMakeFiles/cmTC_260b9.dir/build.make CMakeFiles/cmTC_260b9.dir/build
+make[1]: Entering directory '/mnt/c/Users/Navil/Desktop/Robesafe/rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_260b9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_260b9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_260b9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_260b9.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_    CMakeFiles/cmTC_260b9.dir/CheckFunctionExists.c.o  -o cmTC_260b9  /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_260b9.dir/CheckFunctionExists.c.o: in function `main':
 CheckFunctionExists.c:(.text+0x14): undefined reference to `cheev_'
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [CMakeFiles/cmTC_34d2e.dir/build.make:100: cmTC_34d2e] Error 1
-gmake[1]: Leaving directory '/home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_34d2e/fast] Error 2
-
-
-
-Determining if the function cheev_ exists failed with the following output:
-Change Dir: /home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6daec/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6daec.dir/build.make CMakeFiles/cmTC_6daec.dir/build
-gmake[1]: Entering directory '/home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6daec.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_6daec.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
-Linking C executable cmTC_6daec
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6daec.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_ CMakeFiles/cmTC_6daec.dir/CheckFunctionExists.c.o -o cmTC_6daec  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so -fortranlibs 
-cc: error: unrecognized command-line option ‘-fortranlibs’
-gmake[1]: *** [CMakeFiles/cmTC_6daec.dir/build.make:101: cmTC_6daec] Error 1
-gmake[1]: Leaving directory '/home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:127: cmTC_6daec/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_260b9.dir/build.make:88: cmTC_260b9] Error 1
+make[1]: Leaving directory '/mnt/c/Users/Navil/Desktop/Robesafe/rbs_control_modules/cpp_controllers/rbs_lqr_cpp/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_260b9/fast] Error 2
 
 
 
