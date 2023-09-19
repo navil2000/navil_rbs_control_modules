@@ -1,0 +1,55 @@
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_mpc_cpp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_32e0a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_32e0a.dir/build.make CMakeFiles/cmTC_32e0a.dir/build
+gmake[1]: Entering directory '/home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_mpc_cpp/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_32e0a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_ -o CMakeFiles/cmTC_32e0a.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_32e0a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32e0a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_ CMakeFiles/cmTC_32e0a.dir/CheckFunctionExists.c.o -o cmTC_32e0a 
+/usr/bin/ld: CMakeFiles/cmTC_32e0a.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_32e0a.dir/build.make:99: cmTC_32e0a] Error 1
+gmake[1]: Leaving directory '/home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_mpc_cpp/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_32e0a/fast] Error 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_mpc_cpp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_85957/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_85957.dir/build.make CMakeFiles/cmTC_85957.dir/build
+gmake[1]: Entering directory '/home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_mpc_cpp/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_85957.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_85957.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_85957
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85957.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_ CMakeFiles/cmTC_85957.dir/CheckFunctionExists.c.o -o cmTC_85957  /usr/lib/x86_64-linux-gnu/libblas.so -lm -ldl 
+/usr/bin/ld: CMakeFiles/cmTC_85957.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cheev_'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_85957.dir/build.make:100: cmTC_85957] Error 1
+gmake[1]: Leaving directory '/home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_mpc_cpp/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_85957/fast] Error 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_mpc_cpp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_cda4f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cda4f.dir/build.make CMakeFiles/cmTC_cda4f.dir/build
+gmake[1]: Entering directory '/home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_mpc_cpp/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cda4f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_cda4f.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cda4f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cda4f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_ CMakeFiles/cmTC_cda4f.dir/CheckFunctionExists.c.o -o cmTC_cda4f  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so -fortranlibs 
+cc: error: unrecognized command-line option ‘-fortranlibs’
+gmake[1]: *** [CMakeFiles/cmTC_cda4f.dir/build.make:101: cmTC_cda4f] Error 1
+gmake[1]: Leaving directory '/home/robesafe/Navil/navil_rbs_control_modules/cpp_controllers/rbs_mpc_cpp/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_cda4f/fast] Error 2
+
+
+
